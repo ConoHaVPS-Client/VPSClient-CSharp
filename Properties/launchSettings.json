@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "ConohaVPS": {
+      "commandName": "Project"
+    },
+    "conoha-vps node plan": {
+      "commandName": "Project",
+      "commandLineArgs": "node plan"
+    }
+  }
+}
