@@ -65,6 +65,7 @@ public class ClientIdentify
         var url = "/";
 
         var request = new RestRequest(url, Method.Get);
+
         request.AddHeader(_http_header, _contents_type);
 
         Debug.Assert(_client != null);
@@ -80,6 +81,7 @@ public class ClientIdentify
         var url = "/";
 
         var request = new RestRequest(url, Method.Get);
+
         request.AddHeader(_http_header, _contents_type);
 
         Debug.Assert(_client != null);

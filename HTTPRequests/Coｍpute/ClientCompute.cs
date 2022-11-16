@@ -56,6 +56,4 @@ public class ClientCompute
         Debug.Assert(_client != null);
         return await _client.GetAsync(request);
     }
-
-
 }
