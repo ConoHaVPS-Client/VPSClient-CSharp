@@ -2,6 +2,6 @@
 {
     private static Task<int> Main(string[] args)
     {
-        return ConohaVPS.Commands.ConohaVPS.Execute(args);
+        return ConohaVPS.Commands.BaseCommand.Execute(args);
     }
 }
