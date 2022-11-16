@@ -3,7 +3,7 @@
 using System.CommandLine;
 using System.Threading.Tasks;
 
-internal class ConohaVPS
+internal class BaseCommand
 {
     public static async Task<int> Execute(string[] args)
     {
