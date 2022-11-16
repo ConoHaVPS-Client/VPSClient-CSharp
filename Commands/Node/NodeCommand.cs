@@ -8,6 +8,9 @@ internal class NodeCommand
     private readonly Command _nodeCommand;
     private string _endpoint;
 
+    /// <summary>
+    /// Computeサーバーで取り扱っている仮想マシンの種類と各種情報を取得するコマンド"plan"を追加する。
+    /// </summary>
     public NodeCommand(RootCommand rootCommand, string endpoint)
     {
         _endpoint = endpoint;
