@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConohaVPS", "ConohaVPS.csproj", "{F91C046D-388A-4CA7-9715-3FD32B00CA8D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{0E31B6B4-81CA-4629-9CBD-C1E046C195D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F91C046D-388A-4CA7-9715-3FD32B00CA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F91C046D-388A-4CA7-9715-3FD32B00CA8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F91C046D-388A-4CA7-9715-3FD32B00CA8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E31B6B4-81CA-4629-9CBD-C1E046C195D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E31B6B4-81CA-4629-9CBD-C1E046C195D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E31B6B4-81CA-4629-9CBD-C1E046C195D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E31B6B4-81CA-4629-9CBD-C1E046C195D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
