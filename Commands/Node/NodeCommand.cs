@@ -6,14 +6,12 @@ internal class NodeCommand
 {
     private readonly RootCommand _rootCommand;
     private readonly Command _nodeCommand;
-    private string _endpoint;
 
     /// <summary>
     /// NodeCommandクラスのコンストラクタ。
     /// </summary>
-    public NodeCommand(RootCommand rootCommand, string endpoint)
+    public NodeCommand(RootCommand rootCommand)
     {
-        _endpoint = endpoint;
         _rootCommand = rootCommand;
 
         _nodeCommand = new Command("node", "");
