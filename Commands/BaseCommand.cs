@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 internal class BaseCommand
 {
     private const string _rootDescripton = "Client for ConoHa VPS.";
+    public RootCommand _rootCommand;
+    public BaseCommand()
+    {
+        _rootCommand = new RootCommand(_rootDescripton);
+    }
 
     public async Task<int> Execute(string[] args)
     {
-        var rootCommand = new RootCommand(_rootDescripton);
-
-        rootCommand.SetHandler(() =>
+        _rootCommand.SetHandler(() =>
         {
         });
 
-        return await rootCommand.InvokeAsync(args);
+        return await _rootCommand.InvokeAsync(args);
     }
 }
