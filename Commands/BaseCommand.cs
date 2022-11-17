@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 internal class BaseCommand
 {
-    public static async Task<int> Execute(string[] args)
+    public async Task<int> Execute(string[] args)
     {
         var rootCommand = new RootCommand("Client for ConoHa VPS.");
 
