@@ -2,7 +2,7 @@
 
 using System.CommandLine;
 
-internal class NodeCommand
+internal class NodeSubCommand
 {
     private readonly Command _nodeCommand;
     private readonly Option<string> _username;
@@ -13,7 +13,7 @@ internal class NodeCommand
     /// <summary>
     /// NodeCommandクラスのコンストラクタ。
     /// </summary>
-    public NodeCommand(RootCommand rootCommand)
+    public NodeSubCommand(RootCommand rootCommand)
     {
         _nodeCommand = new Command("node", "");
         _username = CommandsUtil.MakeStringOption("--username");
