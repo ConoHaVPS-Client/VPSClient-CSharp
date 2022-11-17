@@ -10,7 +10,7 @@
     <Authors>whojinn</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Title>$(AssemblyName)</Title>
-    <AssemblyName>ConohaVPS-Client</AssemblyName>
+    <AssemblyName>conoha-vps</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
