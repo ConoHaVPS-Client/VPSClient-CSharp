@@ -37,7 +37,7 @@ internal class NodeCommand
     private void RegisterPlanCommands()
     {
         var plan_command = new Command("plan", "Get currently available VPS plans");
-        _nodeCommand.AddCommand(_rootCommand);
+        _nodeCommand.AddCommand(plan_command);
 
         var option_verbose = CommandsUtil.MakeBooleanOption("--verbose", "-v");
 
