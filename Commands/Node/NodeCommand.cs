@@ -4,7 +4,6 @@ using System.CommandLine;
 
 internal class NodeCommand
 {
-    private readonly RootCommand _rootCommand;
     private readonly Command _nodeCommand;
     private readonly Option<string> _username;
     private readonly Option<string> _password;
@@ -16,8 +15,6 @@ internal class NodeCommand
     /// </summary>
     public NodeCommand(RootCommand rootCommand)
     {
-        _rootCommand = rootCommand;
-
         _nodeCommand = new Command("node", "");
         _username = CommandsUtil.MakeStringOption("--username");
         _password = CommandsUtil.MakeStringOption("--password");
@@ -29,7 +26,7 @@ internal class NodeCommand
         _nodeCommand.AddGlobalOption(_tenantid);
         _nodeCommand.AddGlobalOption(_endpoint);
 
-        _rootCommand.AddCommand(_nodeCommand);
+        rootCommand.AddCommand(_nodeCommand);
 
         RegisterPlanCommands();
     }
