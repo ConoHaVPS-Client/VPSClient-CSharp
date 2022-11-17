@@ -27,12 +27,14 @@ internal class NodeSubCommand
         _nodeCommand.AddGlobalOption(_endpoint);
 
         rootCommand.AddCommand(_nodeCommand);
+
+        RegisterPlanCommands();
     }
 
     /// <summary>
     /// Computeサーバーで取り扱っている仮想マシンの種類と各種情報を取得するコマンド"plan"を追加する。
     /// </summary>
-    public void RegisterPlanCommands()
+    private void RegisterPlanCommands()
     {
         var plan_command = new Command("plan", "Get currently available VPS plans");
         _nodeCommand.AddCommand(plan_command);
