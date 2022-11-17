@@ -31,10 +31,10 @@ internal class NodeCommand
         var plan_command = new Command("plan", "Get currently available VPS plans");
         _nodeCommand.AddCommand(_rootCommand);
 
-        var option_username = CommandsUtil.AddStringOption(plan_command, "--username");
-        var option_password = CommandsUtil.AddStringOption(plan_command, "--password");
-        var option_tenantid = CommandsUtil.AddStringOption(plan_command, "--tenantid");
-        var option_verbose = CommandsUtil.AddBoolOption(plan_command, "--verbose", "-v");
+        var option_username = CommandsUtil.MakeStringOption("--username");
+        var option_password = CommandsUtil.MakeStringOption("--password");
+        var option_tenantid = CommandsUtil.MakeStringOption("--tenantid");
+        var option_verbose = CommandsUtil.MakeBooleanOption("--verbose", "-v");
 
         //TODO: コマンドの実装をここに登録する 
         plan_command.SetHandler((username, password, verbose) =>
