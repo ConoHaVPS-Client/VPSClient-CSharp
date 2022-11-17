@@ -6,67 +6,58 @@ namespace ConohaVPS.Commands;
 internal static class CommandsUtil
 {
     /// <summary>
-    /// 整数を引数に取るオプションをサブコマンドに追加。
+    /// 文字列を引数に取るオプションを定義する。
     /// </summary>
-    /// <param name="command">サブコマンドのインスタンス</param>
-    /// <param name="option_name">オプションのフルネーム</param>
-    /// <param name="option_alias">オプションの別名</param>
-    /// <param name="option_descripton">オプションの説明</param>
-    public static Option<int> AddIntegerOption(Command command, string option_name, string? option_alias = null, string? option_descripton = null)
+    /// <param name="name">オプションのフルネーム</param>
+    /// <param name="alias">オプションの別名</param>
+    /// <param name="descripton">オプションの説明</param>
+    public static Option<string> MakeStringOption(string name, string? alias = null, string? descripton = null)
     {
-        var option = new Option<int>(option_name, option_descripton);
+        var option = new Option<string>(name, descripton);
 
-        if (option_alias != null)
+        if (alias != null)
         {
-            option.AddAlias(option_alias);
+            option.AddAlias(alias);
         }
-
-        command.AddOption(option);
 
         Debug.Assert(option != null);
         return option;
     }
 
     /// <summary>
-    /// 文字列を引数に取るオプションをサブコマンドに追加。
+    /// 整数を引数に取るオプションを定義する。
     /// </summary>
-    /// <param name="command">サブコマンドのインスタンス</param>
-    /// <param name="option_name">オプションのフルネーム</param>
-    /// <param name="option_alias">オプションの別名</param>
-    /// <param name="option_descripton">オプションの説明</param>
-    public static Option<string> AddStringOption(Command command, string option_name, string? option_alias = null, string? option_descripton = null)
+    /// <param name="name">オプションのフルネーム</param>
+    /// <param name="alias">オプションの別名</param>
+    /// <param name="descripton">オプションの説明</param>
+    public static Option<string> MakeIntegerOption(string name, string? alias = null, string? descripton = null)
     {
-        var option = new Option<string>(option_name, option_descripton);
+        var option = new Option<string>(name, descripton);
 
-        if (option_alias != null)
+        if (alias != null)
         {
-            option.AddAlias(option_alias);
+            option.AddAlias(alias);
         }
-
-        command.AddOption(option);
 
         Debug.Assert(option != null);
         return option;
     }
 
     /// <summary>
-    /// ブール値を引数に取るオプションをサブコマンドに追加。
+    /// 論理値を引数に取るオプションを定義する。
     /// </summary>
-    /// <remarks>明示的に指定されない限り、オプションの値はtrueとなっている</remarks>
-    /// <param name="command">サブコマンドのインスタンス</param>
-    /// <param name="option_name">オプションのフルネーム</param>
-    /// <param name="option_alias">オプションの別名</param>
-    /// <param name="option_descripton">オプションの説明</param>
-    public static Option<bool> AddBoolOption(Command command, string option_name, string? option_alias = null, string? option_descripton = null)
+    /// <remarks>明示的に指定されない限り、オプションの値はtrueとなる</remarks>
+    /// <param name="name">オプションのフルネーム</param>
+    /// <param name="alias">オプションの別名</param>
+    /// <param name="descripton">オプションの説明</param>
+    public static Option<string> MakeBooleanOption(string name, string? alias = null, string? descripton = null)
     {
-        var option = new Option<bool>(option_name, option_descripton);
+        var option = new Option<string>(name, descripton);
 
-        if (option_alias != null)
+        if (alias != null)
         {
-            option.AddAlias(option_alias);
+            option.AddAlias(alias);
         }
-
-        command.AddOption(option);
 
         Debug.Assert(option != null);
         return option;
