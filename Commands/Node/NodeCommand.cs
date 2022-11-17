@@ -40,9 +40,9 @@ internal class NodeCommand
         var option_verbose = CommandsUtil.MakeBooleanOption("--verbose", "-v");
 
         //TODO: コマンドの実装をここに登録する 
-        plan_command.SetHandler((username, password, verbose) =>
+        plan_command.SetHandler((username, password, tenantid, endpoint, verbose) =>
         {
 
-        }, _username, _password, option_verbose);
+        }, _username, _password, _tenantid, _endpoint, option_verbose);
     }
 }
